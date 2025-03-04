@@ -57,7 +57,13 @@ float Student::getAverage()
 }
 
 short CompareStudentsName(Student student1, Student student2) {
-	return strcmp(student1.getName(), student2.getName());
+	int cmp = strcmp(student1.getName(), student2.getName());
+	if (cmp == 0)
+		return 0;
+	else if (cmp > 0)
+		return 1;
+	else
+		return -1;
 }
 
 short CompareStudentsMathGrade(Student student1, Student student2) {

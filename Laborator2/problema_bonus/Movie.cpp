@@ -59,7 +59,13 @@ short Movie::get_passed_years()
 
 short movie_compare_name(Movie m1, Movie m2)
 {
-	return strcmp(m1.get_name(), m2.get_name());
+	int cmp = strcmp(m1.get_name(), m2.get_name());
+	if (cmp == 0)
+		return 0;
+	else if (cmp > 0)
+		return 1;
+	else
+		return -1;
 }
 
 short movie_compare_year(Movie m1, Movie m2)
