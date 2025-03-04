@@ -141,7 +141,7 @@ int Div(int a, int b) { return a / b; }
 
 int main(int argc, char* argv[])
 {
-    char input[39] = "---H***E+++L+++L///O---P+++O/+-**O---";
+    char input[39] = "---***++++++///---+++/+-**---";
     func Operatori[4] = {Sum, Dif, Mul, Div};
     int S = 0, V;
     Content x = {0, 0};
