@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "Movie.h"
+#include "GlobalFunctions.h"
 #include "MovieSeries.h"
 
 

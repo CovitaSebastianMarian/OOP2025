@@ -1,4 +1,5 @@
 #include "MovieSeries.h"
+#include "GlobalFunctions.h"
 #include <iostream>
 
 void MovieSeries::init()
