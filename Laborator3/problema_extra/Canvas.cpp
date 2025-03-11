@@ -9,11 +9,8 @@ Canvas::Canvas(int lines, int columns)
 	for (int i = 0; i < lines; i++)
 	{
 		mat[i] = new char[columns];
-		for (int j = 0; j < columns; j++)
-		{
-			mat[i][j] = ' ';
-		}
 	}
+	this->clear();
 }
 
 void Canvas::set_pixel(int x, int y, char value)
@@ -33,6 +30,7 @@ void Canvas::set_pixels(int count, ...)
 		char value = va_arg(args, char);
 		set_pixel(x, y, value);
 	}
+	va_end(args);
 }
 
 void Canvas::clear()
