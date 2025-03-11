@@ -1,6 +1,7 @@
 #include "Math.h"
 #include <cstring>
 #include <iostream>
+#include <cstdarg>
 
 int Math::Add(int a, int b)
 {
@@ -44,14 +45,14 @@ int Math::Mul(double a, double b, double c)
 
 int Math::Add(int count, ...)
 {
-    int s = 0;
-    int* p = &count;
-    p++;
-    for (int i = 0; i < count; ++i) {
-        s += *p;
-        p++;
+    va_list args;
+    va_start(args, count);
+    int sum = 0;
+    for (int i = 0; i < count; i++) {
+    	sum += va_arg(args, int);
     }
-    return s;
+    va_end(args);
+    return sum;
 }
 
 char* Math::Add(const char* a, const char* b)

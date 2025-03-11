@@ -29,7 +29,7 @@ void Canvas::DrawCircle(int x, int y, int ray, char ch)
 void Canvas::FillCircle(int x, int y, int ray, char ch)
 {
 	for (int i = 1; i < 360; ++i) {
-		for (int j = 0; j < ray; ++j) {
+		for (int j = 0; j <= ray; ++j) {
 			int x1 = x + j * cos(i);
 			int y1 = y + j * sin(i);
 			if (x1 >= 0 && x1 < width && y1 >= 0 && y1 < height) {
